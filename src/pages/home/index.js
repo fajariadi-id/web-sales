@@ -4,11 +4,13 @@ import Navbar from "../../components/Navbar";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
 
-      <HeroSlider />
-    </div>
+      <main>
+        <HeroSlider />
+      </main>
+    </>
   );
 };
 
