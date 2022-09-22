@@ -1,9 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import terios from "../../assets/images/terios.jpg";
-import xenia from "../../assets/images/xenia.jpg";
-import rocky from "../../assets/images/rocky.jpg";
+import terios from "../../assets/images/cars/terios.jpg";
+import xenia from "../../assets/images/cars/xenia.jpg";
+import rocky from "../../assets/images/cars/rocky.jpg";
 
 const HeroSlider = () => {
   return (

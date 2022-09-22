@@ -22,7 +22,6 @@ export const NavigationBar = styled.nav`
   }
 
   & a {
-    font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 700;
     color: #f6f6f4 !important;
