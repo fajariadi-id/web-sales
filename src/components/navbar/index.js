@@ -43,13 +43,15 @@ const Navbar = () => {
   return (
     <NavigationBar ref={nav} showNav={showNav}>
       <div className="container d-flex align-items-center justify-content-between h-100">
-        <img src="/assets/images/logo.svg" alt="" />
+        <a href="#home">
+          <img src="/assets/images/logo.svg" alt="" />
+        </a>
 
         <div className="links d-flex align-items-center">
           <a href="#promotion" onClick={(e) => handleScrollLink(e)}>
             Promo
           </a>
-          <a href="#product" onClick={(e) => handleScrollLink(e)}>
+          <a href="#products" onClick={(e) => handleScrollLink(e)}>
             Produk
           </a>
           <a href="#contact" onClick={(e) => handleScrollLink(e)}>

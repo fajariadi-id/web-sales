@@ -12,6 +12,7 @@ const Promotion = () => {
           <a
             href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya mau tau informasi mengenai promo ini dong!"
             target="_blank"
+            rel="noreferrer"
           >
             <img src={bannerPromo} alt="promo" />
           </a>
@@ -20,6 +21,7 @@ const Promotion = () => {
           <a
             href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya mau tau informasi mengenai promo ini dong!"
             target="_blank"
+            rel="noreferrer"
           >
             <img src={bannerPromo} alt="promo" />
           </a>
@@ -28,6 +30,7 @@ const Promotion = () => {
           <a
             href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya mau tau informasi mengenai promo ini dong!"
             target="_blank"
+            rel="noreferrer"
           >
             <img src={bannerPromo} alt="promo" />
           </a>

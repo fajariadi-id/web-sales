@@ -7,7 +7,7 @@ import rocky from "../../assets/images/cars/rocky.jpg";
 
 const HeroSlider = () => {
   return (
-    <section id="hero">
+    <section id="home">
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
