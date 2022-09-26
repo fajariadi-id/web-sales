@@ -75,7 +75,7 @@ const Footer = ({ nav }) => {
         </div>
       </div>
 
-      <p className="copy mb-1 text-center text-white">
+      <p className="copy m-0 text-center text-white">
         &copy; 2022. Daihatsu Sahabatku
       </p>
     </FooterSection>

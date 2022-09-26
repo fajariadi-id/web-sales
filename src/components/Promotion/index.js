@@ -5,7 +5,7 @@ import bannerPromo from "../../assets/images/banners/promo.jpg";
 const Promotion = () => {
   return (
     <PromoSection id="promotion" className="container">
-      <h1 className="text-center">Promo Bulan Ini</h1>
+      <h1 className="text-center">Promo Kami</h1>
 
       <div className="d-flex justify-content-between align-items-center">
         <article>
