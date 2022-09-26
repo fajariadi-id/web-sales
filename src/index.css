@@ -29,20 +29,20 @@ html {
 }
 
 body {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   background-color: var(--clr-white);
   color: var(--clr-black);
   line-height: 1.5;
   font-size: 0.875rem;
 }
 
-a,
+/* a,
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--ff-primary);
-}
+} */
 
 ul {
   list-style: none;
