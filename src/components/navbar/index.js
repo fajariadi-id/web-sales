@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import GlobalState from "../../context/globalState";
 import { NavigationBar } from "./styled";
 
-const Navbar = () => {
+const Navbar = ({ navbarRef }) => {
   const { count, setCount } = useContext(GlobalState);
   const navigate = useNavigate();
 
@@ -39,6 +39,10 @@ const Navbar = () => {
       window.removeEventListener("scroll", scrollNav);
     };
   }, []);
+
+  useEffect(() => {
+    navbarRef(nav);
+  }, [window.pageYOffset]);
 
   return (
     <NavigationBar ref={nav} showNav={showNav}>

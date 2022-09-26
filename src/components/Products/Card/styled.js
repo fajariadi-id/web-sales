@@ -17,7 +17,7 @@ export const ArticleCard = styled.article`
   }
 
   & .product-label {
-    background-color: red;
+    background-color: #eb1d36;
     position: absolute;
     top: 20px;
     left: 0;
