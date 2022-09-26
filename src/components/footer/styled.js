@@ -7,7 +7,7 @@ export const FooterSection = styled.footer`
     padding: 50px 64px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    gap: 50px;
+    gap: 30px;
 
     & a {
       font-size: 18px;
@@ -27,10 +27,11 @@ export const FooterSection = styled.footer`
     & .profile {
       gap: 20px;
 
-      & img {
+      & .img-container {
         width: 164px;
         height: 164px;
         border-radius: 999px;
+        overflow: hidden;
       }
 
       & .name {
@@ -41,12 +42,13 @@ export const FooterSection = styled.footer`
     & .product {
       & div {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
         font-family: "Poppins", sans-serif;
 
         & p {
           cursor: pointer;
+          min-width: 110px;
 
           &:hover {
             text-decoration: underline;

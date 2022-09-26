@@ -9,6 +9,13 @@ export const PromoSection = styled.section`
     margin-bottom: 30px;
   }
 
+  & div {
+    display: grid;
+    grid-template-columns: ${({ isXXL, isXL, isMD }) =>
+      isMD ? "1fr" : isXL ? "1fr 1fr" : "1fr 1fr 1fr"};
+    gap: 30px;
+  }
+
   & img {
     border-radius: 20px;
     transform: translateY(0);

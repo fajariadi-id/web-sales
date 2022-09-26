@@ -4,10 +4,14 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import terios from "../../assets/images/cars/terios.jpg";
 import xenia from "../../assets/images/cars/xenia.jpg";
 import rocky from "../../assets/images/cars/rocky.jpg";
+import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import { HeroSection } from "./styled";
 
 const HeroSlider = () => {
+  const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
+
   return (
-    <section id="home">
+    <HeroSection isMD={isMD} id="home">
       <Swiper
         slidesPerView={1}
         spaceBetween={20}
@@ -21,7 +25,9 @@ const HeroSlider = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination]}
-        className="mySwiper"
+        className={`mySwiper ${
+          isSM ? "isSM" : isMD ? "isMD" : isXL ? "isXL" : ""
+        }`}
       >
         <SwiperSlide>
           <img src={terios} alt="terios" />
@@ -33,7 +39,7 @@ const HeroSlider = () => {
           <img src={rocky} alt="rocky" />
         </SwiperSlide>
       </Swiper>
-    </section>
+    </HeroSection>
   );
 };
 

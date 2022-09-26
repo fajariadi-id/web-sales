@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 
-const responsiveBreakpoints = () => {
+const ResponsiveBreakpoints = () => {
   const isSM = useMediaQuery({ query: "(max-width: 576px)" });
   const isMD = useMediaQuery({ query: "(max-width: 768px)" });
   const isLG = useMediaQuery({ query: "(max-width: 992px)" });
@@ -10,4 +10,4 @@ const responsiveBreakpoints = () => {
   return { isSM, isMD, isLG, isXL, isXXL };
 };
 
-export default responsiveBreakpoints;
+export default ResponsiveBreakpoints;

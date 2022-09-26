@@ -2,10 +2,20 @@ import React from "react";
 import { SectionProducts } from "./styled";
 import { Parallax } from "react-parallax";
 import ProductCard from "./Card";
+import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
 
 const Products = () => {
+  const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
+
   return (
-    <SectionProducts id="products">
+    <SectionProducts
+      isSM={isSM}
+      isMD={isMD}
+      isLG={isLG}
+      isXL={isXL}
+      isXXL={isXXL}
+      id="products"
+    >
       <Parallax
         // blur={5}
         bgImage="/assets/images/bgProduct.jpg"

@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
 import { FooterSection } from "./styled";
 
 const Footer = ({ nav }) => {
-  const [showNav, setShowNav] = useState(false);
+  const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
 
   const handleScrollLink = (e) => {
     e.preventDefault();
@@ -21,23 +22,21 @@ const Footer = ({ nav }) => {
     });
   };
 
-  useEffect(() => {
-    const scrollNav = () => {
-      // 120 -> navbar height
-      window.pageYOffset > 120 ? setShowNav(true) : setShowNav(false);
-    };
-    window.addEventListener("scroll", scrollNav);
-
-    return () => {
-      window.removeEventListener("scroll", scrollNav);
-    };
-  }, []);
-
   return (
     <FooterSection className="container">
-      <div className="footer d-flex">
-        <div className="profile d-flex align-items-center">
-          <img src="/assets/images/profile.jpg" alt="" />
+      <div
+        className={`footer d-flex ${
+          isMD && "flex-column"
+        } justify-content-between`}
+      >
+        <div
+          className={`profile d-flex ${
+            isLG && "flex-column"
+          } align-items-center`}
+        >
+          <div className="img-container">
+            <img src="/assets/images/profile.jpg" alt="profile" />
+          </div>
 
           <div>
             <h1 className="name m-0">Cliff Kiven Parera</h1>

@@ -1,9 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
 
 const CTAFixed = ({ img, icon }) => {
+  const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
+
   return (
-    <CTAButton img={img} icon={icon}>
+    <CTAButton
+      isSM={isSM}
+      isMD={isMD}
+      isLG={isLG}
+      isXL={isXL}
+      isXXL={isXXL}
+      img={img}
+      icon={icon}
+    >
       {img && <img src={img} alt="cta-fixed" />}
 
       {icon && icon}
@@ -12,22 +23,23 @@ const CTAFixed = ({ img, icon }) => {
 };
 
 const CTAButton = styled.div`
-  background-color: ${({ img, icon }) => (img ? "#00a884" : "#0DCAF0")};
+  background-color: ${({ img }) => (img ? "#00a884" : "#0DCAF0")};
   position: fixed;
-  bottom: ${({ img, icon }) => (img ? "130px" : "50px")};
+  bottom: ${({ img, isMD }) =>
+    img ? (isMD ? "85px" : "130px") : isMD ? "30px" : "50px"};
   left: 3%;
   z-index: 999;
-  padding: ${({ img, icon }) => (img ? "10px" : "18px")};
+  padding: ${({ img, isMD }) => (img ? "10px" : isMD ? "12px" : "18px")};
   border-radius: 999px;
 
   & img {
-    width: 50px;
-    height: 50px;
+    width: ${({ isMD }) => (isMD ? "30px" : "50px")};
+    height: ${({ isMD }) => (isMD ? "30px" : "50px")};
   }
 
   & .icon {
-    width: 30px;
-    height: 30px;
+    width: ${({ isMD }) => (isMD ? "20px" : "30px")};
+    height: ${({ isMD }) => (isMD ? "20px" : "30px")};
   }
 `;
 

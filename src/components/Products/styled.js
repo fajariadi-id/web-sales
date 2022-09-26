@@ -17,7 +17,14 @@ export const SectionProducts = styled.section`
 
   & .products {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: ${({ isXXL, isXL, isMD }) =>
+      isMD
+        ? "1fr"
+        : isXL
+        ? "1fr 1fr"
+        : isXXL
+        ? "1fr 1fr 1fr"
+        : "1fr 1fr 1fr 1fr"};
+    gap: 30px;
   }
 `;
