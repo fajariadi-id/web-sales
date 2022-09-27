@@ -14,10 +14,6 @@ export const NavigationBar = styled.nav`
   transition: all 0.5s ease;
   z-index: 999;
 
-  & .sidebar {
-    background-color: red;
-  }
-
   & .menu-bar {
     cursor: pointer;
   }
@@ -42,6 +38,33 @@ export const NavigationBar = styled.nav`
         text-shadow: 0 0 #2222224d;
         font-weight: 700;
       }
+    }
+  }
+`;
+
+export const LogoSidebar = styled.img`
+  height: 30px;
+`;
+
+export const LinksSidebar = styled.div`
+  gap: 30px;
+  margin-top: 50px;
+  & a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #222 !important;
+    cursor: pointer;
+    border-bottom: 1px solid #222;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #eb1d36 !important;
+      border-bottom: 1px solid #3975bb;
+      background-color: #3975bb4d;
+      border-radius: 10px;
+      text-shadow: 0 0 #2222224d;
+      font-weight: 700;
     }
   }
 `;

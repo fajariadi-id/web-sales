@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import GlobalState from "../../context/globalState";
-import { NavigationBar } from "./styled";
+import { LinksSidebar, LogoSidebar, NavigationBar } from "./styled";
 import ResponsiveBreakpoint from "../../constant/ResponsiveBreakpoints";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 import { FaBars } from "react-icons/fa";
+import CallToAction from "../CallToAction";
 
 const Navbar = ({ navbarRef }) => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoint();
@@ -58,9 +59,20 @@ const Navbar = ({ navbarRef }) => {
   return (
     <NavigationBar isMD={isMD} ref={nav} showNav={showNav}>
       <div className="container d-flex align-items-center justify-content-between h-100">
-        <a href="#home">
-          <img src="/assets/images/logo.svg" alt="" />
-        </a>
+        {!showMenuBar && (
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowMenuBar(false);
+              window.scrollTo({
+                top: 0,
+              });
+            }}
+          >
+            <img src="/assets/images/logo.svg" alt="" />
+          </a>
+        )}
 
         {!isMD && (
           <div className="links d-flex align-items-center">
@@ -76,7 +88,7 @@ const Navbar = ({ navbarRef }) => {
           </div>
         )}
 
-        {isMD && (
+        {isMD && !showMenuBar && (
           <FaBars
             onClick={() => setShowMenuBar(!showMenuBar)}
             className="menu-bar"
@@ -91,20 +103,32 @@ const Navbar = ({ navbarRef }) => {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title>
+              <a
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowMenuBar(false);
+                  window.scrollTo({
+                    top: 0,
+                  });
+                }}
+              >
+                <LogoSidebar src="/assets/images/logo.svg" alt="ssss" />
+              </a>
+            </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <div className="sidebar d-flex flex-column align-items-center">
+            <LinksSidebar className="d-flex flex-column">
               <a href="#promotion" onClick={(e) => handleScrollLink(e)}>
                 Promo
               </a>
               <a href="#products" onClick={(e) => handleScrollLink(e)}>
                 Produk
               </a>
-              <a href="#contact" onClick={(e) => handleScrollLink(e)}>
-                Kontak
-              </a>
-            </div>
+            </LinksSidebar>
+
+            <CallToAction sidebar />
           </Offcanvas.Body>
         </Offcanvas>
       </div>

@@ -21,7 +21,7 @@ const Promotion = () => {
       <div className="container">
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya mau tau informasi mengenai promo ini dong!"
+            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
             target="_blank"
             rel="noreferrer"
           >
@@ -30,7 +30,7 @@ const Promotion = () => {
         </article>
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya mau tau informasi mengenai promo ini dong!"
+            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
             target="_blank"
             rel="noreferrer"
           >
@@ -39,7 +39,7 @@ const Promotion = () => {
         </article>
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya mau tau informasi mengenai promo ini dong!"
+            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
             target="_blank"
             rel="noreferrer"
           >
