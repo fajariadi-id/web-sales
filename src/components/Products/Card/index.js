@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
       <div className="btn-container d-flex justify-content-center">
         <a
           ref={whatsappRef}
-          href={`https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu ${product.name}.`}
+          href={`https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik untuk memiliki mobil Daihatsu ${product.name}.`}
           target="_blank"
           rel="noreferrer"
         ></a>

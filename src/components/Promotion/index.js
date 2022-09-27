@@ -18,32 +18,41 @@ const Promotion = () => {
     >
       <h1 className="text-center">Promo Kami</h1>
 
-      <div className="container">
+      <div
+        className={`container ${isMD && "md"} ${isXL && "xl"} ${
+          isXXL && "xxl"
+        }`}
+      >
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
+            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan promo instant approval All New Xenia DP 12juta."
             target="_blank"
             rel="noreferrer"
           >
-            <img src={bannerPromo} alt="promo" />
+            <img src="/assets/images/banner_promo/banner1.jpg" alt="promo" />
           </a>
         </article>
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
+            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan promo All New Xenia."
             target="_blank"
             rel="noreferrer"
           >
-            <img src={bannerPromo} alt="promo" />
+            <video autoPlay muted loop>
+              <source
+                src="/assets/videos/banner_promo/banner_xenia.mp4"
+                type="video/mp4"
+              />
+            </video>
           </a>
         </article>
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
+            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan promo akhir tahun."
             target="_blank"
             rel="noreferrer"
           >
-            <img src={bannerPromo} alt="promo" />
+            <img src="/assets/images/banner_promo/banner2.jpg" alt="promo" />
           </a>
         </article>
       </div>

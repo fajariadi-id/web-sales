@@ -32,7 +32,7 @@ const CallToAction = ({ sidebar }) => {
 
         <a
           ref={whatsappRef}
-          href="https://api.whatsapp.com/send?phone=6285156493801&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
+          href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
           target="_blank"
           rel="noreferrer"
         ></a>

@@ -16,7 +16,11 @@ const CTAFixed = ({ img, icon }) => {
       icon={icon}
     >
       {img && (
-        <a href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik untuk memiliki mobil Daihatsu.">
+        <a
+          href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik untuk memiliki mobil Daihatsu."
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={img} alt="cta-fixed" />
         </a>
       )}
