@@ -8,11 +8,12 @@ export const ArticleCard = styled.article`
   height: 280px;
   /* width: 280px; */
 
-  & img {
+  & .product-img {
+    width: ${({ isMD, isXL }) => (isMD ? "70%" : isXL ? "90%" : "100%")};
     transition: all 0.3s ease;
   }
 
-  &:hover img {
+  &:hover .product-img {
     transform: scale(1.1);
   }
 

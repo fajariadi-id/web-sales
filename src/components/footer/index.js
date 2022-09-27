@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import products from "../../assets/data/products";
 import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
 import { FooterSection } from "./styled";
 
@@ -52,15 +53,11 @@ const Footer = ({ nav }) => {
           </a>
 
           <div className="mt-3">
-            <p className="m-0 p-0">All New Xenia</p>
-            <p className="m-0 p-0">Terios</p>
-            <p className="m-0 p-0">All New Xenia</p>
-            <p className="m-0 p-0">Terios</p>
-            <p className="m-0 p-0">All New Xenia</p>
-            <p className="m-0 p-0">Terios</p>
-            <p className="m-0 p-0">All New Xenia</p>
-            <p className="m-0 p-0">Terios</p>
-            <p className="m-0 p-0">All New Xenia</p>
+            {products.map((item, index) => (
+              <p key={index} className="m-0 p-0">
+                {item.name}
+              </p>
+            ))}
           </div>
         </div>
 

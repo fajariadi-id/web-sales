@@ -6,6 +6,7 @@ import xenia from "../../assets/images/cars/xenia.jpg";
 import rocky from "../../assets/images/cars/rocky.jpg";
 import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
 import { HeroSection } from "./styled";
+import heroImages from "../../assets/data/heroImages";
 
 const HeroSlider = () => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
@@ -29,15 +30,11 @@ const HeroSlider = () => {
           isSM ? "isSM" : isMD ? "isMD" : isXL ? "isXL" : ""
         }`}
       >
-        <SwiperSlide>
-          <img src={terios} alt="terios" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={xenia} alt="xenia" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={rocky} alt="rocky" />
-        </SwiperSlide>
+        {heroImages.map((item, index) => (
+          <SwiperSlide key={index}>
+            <img src={item.img} alt={item.img} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </HeroSection>
   );
