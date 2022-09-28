@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import products from "../../assets/data/products";
-import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import { FooterSection } from "./styled";
 
 const Footer = ({ nav }) => {

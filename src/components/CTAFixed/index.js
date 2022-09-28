@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 
 const CTAFixed = ({ img, icon }) => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();

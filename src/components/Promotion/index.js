@@ -1,7 +1,7 @@
 import React from "react";
 import { PromoSection } from "./styled";
 import bannerPromo from "../../assets/images/banners/promo.jpg";
-import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 
 const Promotion = () => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();

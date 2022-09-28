@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button } from "react-bootstrap";
-import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import { SectionCTA } from "./styled";
 import { FaPhoneAlt } from "react-icons/fa";
 

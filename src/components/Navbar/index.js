@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import GlobalState from "../../context/globalState";
 import { LinksSidebar, LogoSidebar, NavigationBar } from "./styled";
-import ResponsiveBreakpoint from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoint from "../../helper/ResponsiveBreakpoints";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 import { FaBars } from "react-icons/fa";
@@ -20,6 +20,8 @@ const Navbar = ({ navbarRef }) => {
   const [showMenuBar, setShowMenuBar] = useState(false);
 
   const nav = useRef();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const handleScrollLink = (e) => {
     e.preventDefault();
@@ -56,6 +58,12 @@ const Navbar = ({ navbarRef }) => {
     navbarRef(nav);
   }, [window.pageYOffset]);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, [pathname]);
+
   return (
     <NavigationBar isMD={isMD} ref={nav} showNav={showNav}>
       <div className="container d-flex align-items-center justify-content-between h-100">
@@ -70,12 +78,23 @@ const Navbar = ({ navbarRef }) => {
               });
             }}
           >
-            <img src="/assets/images/logo.svg" alt="" />
+            <img src="/assets/images/logo.svg" alt="logo" />
           </a>
         )}
 
         {!isMD && (
           <div className="links d-flex align-items-center">
+            {pathname !== "/" && (
+              <a
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/");
+                }}
+              >
+                Home
+              </a>
+            )}
             <a href="#promotion" onClick={(e) => handleScrollLink(e)}>
               Promo
             </a>

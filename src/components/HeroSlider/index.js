@@ -4,7 +4,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import terios from "../../assets/images/cars/terios.jpg";
 import xenia from "../../assets/images/cars/xenia.jpg";
 import rocky from "../../assets/images/cars/rocky.jpg";
-import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import { HeroSection } from "./styled";
 import heroImages from "../../assets/data/heroImages";
 

@@ -1,8 +1,8 @@
 import React, { createContext } from "react";
 
 const GlobalState = createContext({
-  count: 0,
-  setCount: () => {},
+  car: {},
+  setCar: () => {},
 });
 
 export default GlobalState;

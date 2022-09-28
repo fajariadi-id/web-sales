@@ -2,7 +2,7 @@ import React from "react";
 import { SectionProducts } from "./styled";
 import { Parallax } from "react-parallax";
 import ProductCard from "./Card";
-import ResponsiveBreakpoints from "../../constant/ResponsiveBreakpoints";
+import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import products from "../../assets/data/products";
 
 const Products = () => {
