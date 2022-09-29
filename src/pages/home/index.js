@@ -11,26 +11,43 @@ import { Modal } from "react-bootstrap";
 import SplashScreen from "../../components/SplashScreen";
 import Loading from "../../components/Loading";
 import styled from "styled-components";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [splash, setSplash] = useState(false);
   const [loading, setLoading] = useState(false);
   const [navRef, setNavRef] = useState(null);
 
+  const { state, pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const scrollTo = () => {
+    const linkEl = document.getElementById(state.id);
+    let position = linkEl.offsetTop - state.navHeight;
+    window.scrollTo({
+      top: position,
+    });
+
+    navigate(pathname, { replace: true });
+  };
+
   useEffect(() => {
     setSplash(true);
     setTimeout(() => {
       setLoading(true);
       setSplash(false);
-    }, 500);
+    }, 1000);
 
     setTimeout(() => {
       setLoading(false);
+
+      if (!state) return;
+      scrollTo();
     }, 1500);
   }, []);
 
   return (
-    <Container loading={loading}>
+    <>
       {splash && <SplashScreen />}
 
       {!splash && (
@@ -41,7 +58,7 @@ const Home = () => {
           <CTAFixed img="/assets/images/whatsapp.svg" />
           <CTAFixed icon={<FaPhoneAlt className="icon" color="#f6f6f4" />} />
 
-          <main className="position-relative">
+          <main>
             <HeroSlider />
             <Promotion />
             <Products />
@@ -50,7 +67,7 @@ const Home = () => {
           </main>
         </>
       )}
-    </Container>
+    </>
   );
 };
 

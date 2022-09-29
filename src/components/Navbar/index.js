@@ -10,11 +10,11 @@ import CallToAction from "../CallToAction";
 
 const Navbar = ({ navbarRef }) => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoint();
-  console.log("isSM", isSM);
-  console.log("isMD", isMD);
-  console.log("isLG", isLG);
-  console.log("isXL", isXL);
-  console.log("isXXL", isXXL);
+  // console.log("isSM", isSM);
+  // console.log("isMD", isMD);
+  // console.log("isLG", isLG);
+  // console.log("isXL", isXL);
+  // console.log("isXXL", isXXL);
 
   const [showNav, setShowNav] = useState(false);
   const [showMenuBar, setShowMenuBar] = useState(false);
@@ -22,6 +22,7 @@ const Navbar = ({ navbarRef }) => {
   const nav = useRef();
   const { pathname } = useLocation();
   const navigate = useNavigate();
+  const isHome = pathname === "/";
 
   const handleScrollLink = (e) => {
     e.preventDefault();
@@ -31,8 +32,15 @@ const Navbar = ({ navbarRef }) => {
       nav.current.clientHeight > 80
         ? nav.current.clientHeight - 40
         : nav.current.clientHeight;
+
     const id = e.target.getAttribute("href").slice(1);
     const linkEl = document.getElementById(id);
+    const isContact = id === "contact";
+
+    if (!isHome && !isContact) {
+      navigate("/", { state: { navHeight, id } });
+      return;
+    }
 
     let position = linkEl.offsetTop - navHeight;
 
@@ -84,17 +92,6 @@ const Navbar = ({ navbarRef }) => {
 
         {!isMD && (
           <div className="links d-flex align-items-center">
-            {pathname !== "/" && (
-              <a
-                href="#home"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate("/");
-                }}
-              >
-                Home
-              </a>
-            )}
             <a href="#promotion" onClick={(e) => handleScrollLink(e)}>
               Promo
             </a>

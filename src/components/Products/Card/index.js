@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
 
   const handleDetail = () => {
     setCar(product);
-    navigate(`/${carNameSlug}`);
+    navigate(`/${carNameSlug}`, { state: product });
   };
 
   return (

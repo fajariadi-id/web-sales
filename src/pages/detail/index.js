@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
 import products from "../../assets/data/products";
 import CallToAction from "../../components/CallToAction";
@@ -11,29 +11,16 @@ import Navbar from "../../components/Navbar";
 import SplashScreen from "../../components/SplashScreen";
 import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import useDocumentTitle from "../../helper/useDocumentTitle";
+import Marquee from "react-fast-marquee";
 
 const Detail = () => {
   const [navRef, setNavRef] = useState(null);
-  const [carDetail, setCarDetail] = useState({});
 
-  const { car } = useParams();
+  const { state } = useLocation();
+
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
 
-  const getCarDetail = () => {
-    const findCar = products.find(
-      (item) => item.name.toLowerCase().split(" ").join("-") === car
-    );
-
-    setCarDetail(findCar);
-  };
-
-  useDocumentTitle(`${carDetail?.name} | Daihatsu`);
-
-  useEffect(() => {
-    if (!car) return;
-
-    getCarDetail();
-  }, [car]);
+  useDocumentTitle(`${state?.name} | Daihatsu`);
 
   const [splash, setSplash] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -69,11 +56,37 @@ const Detail = () => {
             isXL={isXL}
             isXXL={isXXL}
           >
-            <img
-              className="banner"
-              src={carDetail.banner}
-              alt={carDetail.name}
-            />
+            <img className="banner" src={state.banner} alt={state.name} />
+
+            <section className="variant">
+              <h1 className="text-center">Daihatsu {state.name}</h1>
+
+              <Marquee className="models" gradientWidth={0} speed={20}>
+                {state.models.map((item, index) => (
+                  <div key={index} className="d-flex flex-column">
+                    <p className="model">{item.name}</p>
+                    <p className="type">{item.transmisionType}</p>
+                  </div>
+                ))}
+              </Marquee>
+
+              <Marquee
+                className="colors"
+                gradientWidth={0}
+                direction="right"
+                speed={70}
+              >
+                {state.colors.map((item, index) => (
+                  <div key={index}>
+                    <img src={item.image} alt={item.name} />
+
+                    <div className="color">
+                      <p className="text-center">{item.name}</p>
+                    </div>
+                  </div>
+                ))}
+              </Marquee>
+            </section>
 
             <CallToAction />
             <Footer nav={navRef} />
@@ -96,6 +109,66 @@ const DetailProduct = styled.main`
     height: ${({ isSM, isMD, isXL }) =>
       isSM ? "30vh" : isMD ? "50vh" : isXL ? "70vh" : "100vh"};
     object-fit: cover;
+  }
+
+  & .variant {
+    margin-top: 70px;
+    color: #f6f6f4;
+
+    & h1 {
+      color: #222;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    & .models {
+      background-color: #eb1d36;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: ${({ isMD }) => (isMD ? "-60px" : "-100px")};
+
+      & div {
+        /* margin: 0 30px; */
+        margin-right: 50px;
+        padding: ${({ isMD }) => (isMD ? "5px 0" : "10px 0")};
+
+        & .model {
+          margin: 0;
+          font-size: ${({ isMD }) => (isMD ? "18px" : "36px")};
+          font-weight: bold;
+        }
+
+        & .type {
+          margin: 0;
+          font-size: ${({ isMD }) => (isMD ? "12px" : "18px")};
+          align-self: end;
+        }
+      }
+    }
+
+    & .colors {
+      /* margin-top: -100px; */
+      & div {
+        /*  */
+        & img {
+          max-width: ${({ isMD }) => (isMD ? "300px" : "500px")};
+          padding: ${({ isMD }) => (isMD ? "0 20px" : "0 50px")};
+        }
+
+        /* color name */
+        & .color {
+          margin-top: ${({ isMD }) => (isMD ? "-20px" : "-30px")};
+          background-color: #3975bb;
+
+          & p {
+            padding: 10px 0;
+            margin-bottom: 0;
+            /* margin-left: -100px; */
+            font-size: ${({ isMD }) => (isMD ? "18px" : "36px")};
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 `;
 
