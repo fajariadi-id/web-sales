@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate, useNavigation } from "react-router-dom";
 import products from "../../assets/data/products";
 import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import { FooterSection } from "./styled";
 
 const Footer = ({ nav }) => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
+
+  const navigate = useNavigate();
 
   const handleScrollLink = (e) => {
     e.preventDefault();
@@ -54,7 +57,15 @@ const Footer = ({ nav }) => {
 
           <div className="mt-3">
             {products.map((item, index) => (
-              <p key={index} className="m-0 p-0">
+              <p
+                onClick={() =>
+                  navigate(`/${item.name.toLowerCase().split(" ").join("-")}`, {
+                    state: item,
+                  })
+                }
+                key={index}
+                className="m-0 p-0"
+              >
                 {item.name}
               </p>
             ))}
