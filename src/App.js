@@ -1,6 +1,11 @@
 import GlobalState from "./context/globalState";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,6 +23,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/:car" element={<Detail />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </GlobalState.Provider>
