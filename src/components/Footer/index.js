@@ -43,10 +43,8 @@ const Footer = ({ nav }) => {
           </div>
 
           <div>
-            <h1 className="name m-0">Cliff Kiven Parera</h1>
-            <p className="m-0 p-0 ps-1">
-              Lorem ipsum dolor sit amet, consectetur{" "}
-            </p>
+            <h1 className="name m-0">Cliff Daihatsu</h1>
+            <p className="m-0 p-0 ps-1">Sales Executive</p>
           </div>
         </div>
 
@@ -83,7 +81,7 @@ const Footer = ({ nav }) => {
       </div>
 
       <p className="copy m-0 text-center text-white">
-        &copy; 2022. Daihatsu Sahabatku
+        &copy; {new Date().getFullYear()}. Sahabat Daihatsu Promo
       </p>
     </FooterSection>
   );

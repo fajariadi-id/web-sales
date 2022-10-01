@@ -60,6 +60,7 @@ const Detail = () => {
 
             <section className="variant">
               <h1 className="text-center">Daihatsu {state.name}</h1>
+              <span className="d-block text-center">Model dan Warna</span>
 
               <Marquee className="models" gradientWidth={0} speed={20}>
                 {state.models.map((item, index) => (
@@ -114,16 +115,22 @@ const DetailProduct = styled.main`
   & .variant {
     margin-top: 70px;
     color: #f6f6f4;
+    font-family: "Poppins", sans-serif;
 
     & h1 {
       color: #222;
       font-weight: bold;
+    }
+
+    & span {
+      color: #222;
+      margin-top: -10px;
       margin-bottom: 30px;
     }
 
     & .models {
       background-color: #eb1d36;
-      font-family: "Poppins", sans-serif;
+
       margin-bottom: ${({ isMD }) => (isMD ? "-60px" : "-100px")};
 
       & div {

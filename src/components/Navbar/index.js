@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import GlobalState from "../../context/globalState";
-import { LinksSidebar, LogoSidebar, NavigationBar } from "./styled";
+import { LinksSidebar, LogoSidebar, NavigationBar, Typography } from "./styled";
 import ResponsiveBreakpoint from "../../helper/ResponsiveBreakpoints";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
@@ -145,6 +145,10 @@ const Navbar = ({ navbarRef }) => {
             </LinksSidebar>
 
             <CallToAction sidebar />
+
+            <Typography className="text-center">
+              Sahabat Daihatsu Promo
+            </Typography>
           </Offcanvas.Body>
         </Offcanvas>
       </div>
