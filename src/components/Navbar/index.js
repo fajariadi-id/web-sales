@@ -81,6 +81,9 @@ const Navbar = ({ navbarRef }) => {
             onClick={(e) => {
               e.preventDefault();
               setShowMenuBar(false);
+
+              if (!isHome) navigate("/");
+
               window.scrollTo({
                 top: 0,
               });
@@ -125,6 +128,9 @@ const Navbar = ({ navbarRef }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   setShowMenuBar(false);
+
+                  if (!isHome) navigate("/");
+
                   window.scrollTo({
                     top: 0,
                   });

@@ -20,7 +20,7 @@ const Detail = () => {
 
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
 
-  useDocumentTitle(`${state?.name} | Daihatsu`);
+  useDocumentTitle(`${state?.name} | Sahabat Daihatsu Promo`);
 
   const [splash, setSplash] = useState(false);
   const [loading, setLoading] = useState(false);
