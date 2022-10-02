@@ -303,13 +303,13 @@ const products = [
     image: "/assets/images/products/grandmax_mb/grandmax_mb.png",
     banner: "/assets/images/hero/grandmax_mb.jpg",
     models: [
-      { name: "Grandmax 1.3 STD", transmisionType: "Hanya Manual" },
-      { name: "Grandmax 1.3 3W", transmisionType: "Hanya Manual" },
-      { name: "Grandmax 1.3 BOX", transmisionType: "Hanya Manual" },
-      { name: "Grandmax 1.5 STD", transmisionType: "Hanya Manual" },
-      { name: "Grandmax 1.5 3W", transmisionType: "Hanya Manual" },
-      { name: "Grandmax 1.5 PS", transmisionType: "Hanya Manual" },
-      { name: "Grandmax 1.5 PS BOX", transmisionType: "Hanya Manual" },
+      { name: "Grandmax MB 1.3 D FH", transmisionType: "Hanya Manual" },
+      { name: "Grandmax MB 1.3 D FF", transmisionType: "Hanya Manual" },
+      { name: "Grandmax MB 1.5 D PS", transmisionType: "Hanya Manual" },
+      {
+        name: "Grandmax MB 1.3 D FH AMBULANCE",
+        transmisionType: "Hanya Manual",
+      },
     ],
     colors: [
       {
@@ -336,13 +336,13 @@ const products = [
     image: "/assets/images/products/grandmax_pu/grandmax_pu.png",
     banner: "/assets/images/hero/grandmax_pu.jpg",
     models: [
-      { name: "Grandmax MB 1.3 D FH", transmisionType: "Hanya Manual" },
-      { name: "Grandmax MB 1.3 D FF", transmisionType: "Hanya Manual" },
-      { name: "Grandmax MB 1.5 D PS", transmisionType: "Hanya Manual" },
-      {
-        name: "Grandmax MB 1.3 D FH AMBULANCE",
-        transmisionType: "Hanya Manual",
-      },
+      { name: "Grandmax 1.3 STD", transmisionType: "Hanya Manual" },
+      { name: "Grandmax 1.3 3W", transmisionType: "Hanya Manual" },
+      { name: "Grandmax 1.3 BOX", transmisionType: "Hanya Manual" },
+      { name: "Grandmax 1.5 STD", transmisionType: "Hanya Manual" },
+      { name: "Grandmax 1.5 3W", transmisionType: "Hanya Manual" },
+      { name: "Grandmax 1.5 PS", transmisionType: "Hanya Manual" },
+      { name: "Grandmax 1.5 PS BOX", transmisionType: "Hanya Manual" },
     ],
     colors: [
       {
