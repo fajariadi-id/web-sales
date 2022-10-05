@@ -60,22 +60,17 @@ const Detail = () => {
 
             <section className="variant">
               <h1 className="text-center">Daihatsu {state.name}</h1>
-              <span className="d-block text-center">Model dan Warna</span>
-
-              <Marquee className="models" gradientWidth={0} speed={20}>
-                {state.models.map((item, index) => (
-                  <div key={index} className="d-flex flex-column">
-                    <p className="model">{item.name}</p>
-                    <p className="type">{item.transmisionType}</p>
-                  </div>
-                ))}
-              </Marquee>
+              <div className="category d-flex align-items-center justify-content-center">
+                <span>Warna</span>
+                <span>Estimasi Harga</span>
+                <span>Model</span>
+              </div>
 
               <Marquee
                 className="colors"
                 gradientWidth={0}
                 direction="right"
-                speed={70}
+                speed={20}
               >
                 {state.colors.map((item, index) => (
                   <div key={index}>
@@ -84,6 +79,35 @@ const Detail = () => {
                     <div className="color">
                       <p className="text-center">{item.name}</p>
                     </div>
+                  </div>
+                ))}
+              </Marquee>
+
+              <Marquee className="price" gradientWidth={0} speed={60}>
+                <div className="d-flex align-items-center">
+                  <img src="/assets/images/accent.svg" alt="accent" />
+                  <p className="text-center">Rp 125.000.000 - Rp 150.000.000</p>
+                </div>
+                <div className="d-flex align-items-center">
+                  <img src="/assets/images/accent.svg" alt="accent" />
+                  <p className="text-center">Rp 125.000.000 - Rp 150.000.000</p>
+                </div>
+                <div className="d-flex align-items-center">
+                  <img src="/assets/images/accent.svg" alt="accent" />
+                  <p className="text-center">Rp 125.000.000 - Rp 150.000.000</p>
+                </div>
+              </Marquee>
+
+              <Marquee
+                className="models"
+                gradientWidth={0}
+                direction="right"
+                speed={60}
+              >
+                {state.models.map((item, index) => (
+                  <div key={index} className="d-flex flex-column">
+                    <p className="model">{item.name}</p>
+                    <p className="type">{item.transmisionType}</p>
                   </div>
                 ))}
               </Marquee>
@@ -122,16 +146,53 @@ const DetailProduct = styled.main`
       font-weight: bold;
     }
 
-    & span {
+    & .category {
+      gap: 10px;
+
+      & span {
+        color: #222;
+        margin-top: -10px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        padding: 3px 5px;
+
+        &:nth-child(1) {
+          background-color: #3975bb;
+          color: #f6f6f4;
+        }
+        &:nth-child(2) {
+          /* background-color: green; */
+        }
+        &:nth-child(3) {
+          background-color: #eb1d36;
+          color: #f6f6f4;
+        }
+      }
+    }
+
+    & .price {
+      background-color: #f6f6f4;
       color: #222;
-      margin-top: -10px;
-      margin-bottom: 30px;
+
+      & div {
+        img {
+          height: ${({ isMD }) => (isMD ? "40px" : "70px")};
+          width: ${({ isMD }) => (isMD ? "40px" : "70px")};
+        }
+      }
+
+      & p {
+        margin: 0;
+        font-size: ${({ isMD }) => (isMD ? "18px" : "36px")};
+        font-weight: bold;
+        padding: ${({ isMD }) => (isMD ? "0 20px" : "0 50px")};
+      }
     }
 
     & .models {
       background-color: #eb1d36;
 
-      margin-bottom: ${({ isMD }) => (isMD ? "-60px" : "-100px")};
+      /* margin-bottom: ${({ isMD }) => (isMD ? "-60px" : "-100px")}; */
 
       & div {
         /* margin: 0 30px; */
