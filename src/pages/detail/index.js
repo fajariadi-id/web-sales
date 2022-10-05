@@ -12,6 +12,7 @@ import SplashScreen from "../../components/SplashScreen";
 import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import useDocumentTitle from "../../helper/useDocumentTitle";
 import Marquee from "react-fast-marquee";
+import { Button } from "react-bootstrap";
 
 const Detail = () => {
   const [navRef, setNavRef] = useState(null);
@@ -60,10 +61,23 @@ const Detail = () => {
 
             <section className="variant">
               <h1 className="text-center">Daihatsu {state.name}</h1>
-              <div className="category d-flex align-items-center justify-content-center">
-                <span>Warna</span>
-                <span>Estimasi Harga</span>
-                <span>Model</span>
+              <div className="cta d-flex flex-column align-items-center">
+                <div className="category d-flex align-items-center justify-content-center">
+                  <span>Warna</span>
+                  <span>Harga</span>
+                  <span>Model</span>
+                </div>
+
+                <Button className="brosur mx-auto">
+                  <a
+                    href="/assets/documents/pricelist.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white"
+                  >
+                    Lihat Brosur
+                  </a>
+                </Button>
               </div>
 
               <Marquee
@@ -86,15 +100,24 @@ const Detail = () => {
               <Marquee className="price" gradientWidth={0} speed={60}>
                 <div className="d-flex align-items-center">
                   <img src="/assets/images/accent.svg" alt="accent" />
-                  <p className="text-center">Rp 125.000.000 - Rp 150.000.000</p>
+                  <p className="text-center">
+                    Harga mulai dari<span className="devider"></span>Rp
+                    123.000.000
+                  </p>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/assets/images/accent.svg" alt="accent" />
-                  <p className="text-center">Rp 125.000.000 - Rp 150.000.000</p>
+                  <p className="text-center">
+                    Harga mulai dari<span className="devider"></span>Rp
+                    123.000.000
+                  </p>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/assets/images/accent.svg" alt="accent" />
-                  <p className="text-center">Rp 125.000.000 - Rp 150.000.000</p>
+                  <p className="text-center">
+                    Harga mulai dari<span className="devider"></span>Rp
+                    123.000.000
+                  </p>
                 </div>
               </Marquee>
 
@@ -152,7 +175,6 @@ const DetailProduct = styled.main`
       & span {
         color: #222;
         margin-top: -10px;
-        margin-bottom: 30px;
         border-radius: 5px;
         padding: 3px 5px;
 
@@ -186,6 +208,29 @@ const DetailProduct = styled.main`
         font-size: ${({ isMD }) => (isMD ? "18px" : "36px")};
         font-weight: bold;
         padding: ${({ isMD }) => (isMD ? "0 20px" : "0 50px")};
+
+        & .devider {
+          display: inline-block;
+          background-color: #eb1d36;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          height: 20px;
+          width: 20px;
+          border-radius: 999px;
+          margin: 0 30px 0 10px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            border-radius: 999px;
+            height: 20px;
+            width: 20px;
+            right: -20px;
+            bottom: 0;
+            z-index: -1;
+            background-color: #3975bb;
+          }
+        }
       }
     }
 
@@ -236,6 +281,24 @@ const DetailProduct = styled.main`
           }
         }
       }
+    }
+  }
+
+  & .cta {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  & .brosur {
+    width: 100%;
+    margin: 10px 0 30px 0;
+    background: linear-gradient(to right, #3975bb, #eb1d36);
+    border: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px);
     }
   }
 `;
