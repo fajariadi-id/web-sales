@@ -24,6 +24,10 @@ export const FooterSection = styled.footer`
       }
     }
 
+    & .owner {
+      gap: 20px;
+    }
+
     & .profile {
       gap: 20px;
 
@@ -59,6 +63,24 @@ export const FooterSection = styled.footer`
 
     & .links {
       gap: 30px;
+    }
+
+    & .address {
+      margin-top: 30px;
+      font-family: "Poppins", sans-serif;
+      gap: 20px;
+
+      & div {
+        & p {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+
+      & .footer-logo {
+        max-width: 300px;
+        object-fit: contain;
+      }
     }
   }
 

@@ -13,6 +13,7 @@ import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import useDocumentTitle from "../../helper/useDocumentTitle";
 import Marquee from "react-fast-marquee";
 import { Button } from "react-bootstrap";
+import CurrencyFormat from "react-currency-format";
 
 const Detail = () => {
   const [navRef, setNavRef] = useState(null);
@@ -68,16 +69,14 @@ const Detail = () => {
                   <span>Model</span>
                 </div>
 
-                <Button className="brosur mx-auto">
-                  <a
-                    href="/assets/documents/pricelist.pdf"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-white"
-                  >
-                    Lihat Brosur
-                  </a>
-                </Button>
+                <a
+                  href="/assets/documents/pricelist.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white brosur mx-auto"
+                >
+                  <Button className="btn-brosur w-100">Lihat Brosur</Button>
+                </a>
               </div>
 
               <Marquee
@@ -101,22 +100,40 @@ const Detail = () => {
                 <div className="d-flex align-items-center">
                   <img src="/assets/images/accent.svg" alt="accent" />
                   <p className="text-center">
-                    Harga mulai dari<span className="devider"></span>Rp
-                    123.000.000
+                    Harga mulai dari<span className="devider"></span>
+                    <CurrencyFormat
+                      value={state.startPrice}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      prefix={"Rp"}
+                    />
                   </p>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/assets/images/accent.svg" alt="accent" />
                   <p className="text-center">
-                    Harga mulai dari<span className="devider"></span>Rp
-                    123.000.000
+                    Harga mulai dari<span className="devider"></span>
+                    <CurrencyFormat
+                      value={state.startPrice}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      prefix={"Rp"}
+                    />
                   </p>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/assets/images/accent.svg" alt="accent" />
                   <p className="text-center">
-                    Harga mulai dari<span className="devider"></span>Rp
-                    123.000.000
+                    Harga mulai dari<span className="devider"></span>
+                    <CurrencyFormat
+                      value={state.startPrice}
+                      displayType={"text"}
+                      thousandSeparator={"."}
+                      decimalSeparator={","}
+                      prefix={"Rp"}
+                    />
                   </p>
                 </div>
               </Marquee>
@@ -292,6 +309,8 @@ const DetailProduct = styled.main`
   & .brosur {
     width: 100%;
     margin: 10px 0 30px 0;
+    padding: 3px 0;
+    border-radius: 10px;
     background: linear-gradient(to right, #3975bb, #eb1d36);
     border: none;
     transition: all 0.3s ease;
@@ -299,6 +318,11 @@ const DetailProduct = styled.main`
     &:hover {
       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
       transform: translateY(-3px);
+    }
+
+    & .btn-brosur {
+      background-color: transparent;
+      border: none;
     }
   }
 `;

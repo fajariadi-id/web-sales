@@ -3,6 +3,7 @@ const products = [
     name: "All New Xenia",
     image: "/assets/images/products/xenia/xenia.png",
     banner: "/assets/images/hero/xenia.jpg",
+    startPrice: 218700000,
     models: [
       { name: "All New Xenia 1.3 Tipe M", transmisionType: "Hanya Manual" },
       { name: "All New Xenia 1.3 Tipe X", transmisionType: "Manual & Matic" },
@@ -62,6 +63,7 @@ const products = [
     name: "Rocky",
     image: "/assets/images/products/rocky/rocky.png",
     banner: "/assets/images/hero/rocky.jpg",
+    startPrice: 207000000,
     models: [
       { name: "Rocky 1.0 R TC", transmisionType: "Manual & Matic" },
       { name: "Rocky 1.0 R TC ADS", transmisionType: "Manual & Matic" },
@@ -109,6 +111,7 @@ const products = [
     name: "Terios",
     image: "/assets/images/products/terios/terios.png",
     banner: "/assets/images/hero/terios.jpg",
+    startPrice: 232300000,
     models: [
       { name: "Terios X IDS", transmisionType: "Hanya Manual" },
       { name: "Terios X DLX IDS", transmisionType: "Manual & Matic" },
@@ -147,6 +150,7 @@ const products = [
     name: "Ayla",
     image: "/assets/images/products/ayla/ayla.png",
     banner: "/assets/images/hero/ayla.jpg",
+    startPrice: 112800000,
     models: [
       { name: "Ayla 1.0 Tipe D", transmisionType: "Hanya Manual" },
       { name: "Ayla 1.0 Tipe D+", transmisionType: "Hanya Manual" },
@@ -191,6 +195,7 @@ const products = [
     name: "Sigra",
     image: "/assets/images/products/sigra/sigra.png",
     banner: "/assets/images/hero/sigra.jpg",
+    startPrice: 131700000,
     models: [
       { name: "Sigra 1.0 Tipe D", transmisionType: "Hanya Manual" },
       { name: "Sigra 1.0 Tipe M", transmisionType: "Hanya Manual" },
@@ -234,6 +239,7 @@ const products = [
     name: "Sirion",
     image: "/assets/images/products/sirion/sirion.png",
     banner: "/assets/images/hero/sirion.jpg",
+    startPrice: 209200000,
     models: [
       { name: "Sirion Matic", transmisionType: "" },
       { name: "Sirion Manual", transmisionType: "" },
@@ -269,6 +275,7 @@ const products = [
     name: "Luxio",
     image: "/assets/images/products/luxio/luxio.png",
     banner: "/assets/images/hero/luxio.jpg",
+    startPrice: 227700000,
     models: [
       { name: "Luxio 1.5 Tipe D", transmisionType: "Hanya Manual" },
       { name: "Luxio 1.5 Tipe X", transmisionType: "Manual & Matic" },
@@ -302,6 +309,7 @@ const products = [
     name: "Grandmax MB",
     image: "/assets/images/products/grandmax_mb/grandmax_mb.png",
     banner: "/assets/images/hero/grandmax_mb.jpg",
+    startPrice: 163850000,
     models: [
       { name: "Grandmax MB 1.3 D FH", transmisionType: "Hanya Manual" },
       { name: "Grandmax MB 1.3 D FF", transmisionType: "Hanya Manual" },
@@ -335,6 +343,7 @@ const products = [
     name: "Grandmax PU",
     image: "/assets/images/products/grandmax_pu/grandmax_pu.png",
     banner: "/assets/images/hero/grandmax_pu.jpg",
+    startPrice: 149900000,
     models: [
       { name: "Grandmax 1.3 STD", transmisionType: "Hanya Manual" },
       { name: "Grandmax 1.3 3W", transmisionType: "Hanya Manual" },
