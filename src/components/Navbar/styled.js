@@ -71,7 +71,6 @@ export const LinksSidebar = styled.div`
 
 export const Typography = styled.h1`
   font-family: "Reenie Beanie", cursive;
-  font-size: 36px;
   margin: 0;
   margin-top: 20px;
 `;

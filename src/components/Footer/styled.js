@@ -25,7 +25,7 @@ export const FooterSection = styled.footer`
     }
 
     & .owner {
-      gap: 20px;
+      gap: ${({ isSM }) => (isSM ? "20px" : "10px")};
     }
 
     & .profile {
@@ -52,7 +52,7 @@ export const FooterSection = styled.footer`
 
         & p {
           cursor: pointer;
-          min-width: 110px;
+          min-width: 120px;
 
           &:hover {
             text-decoration: underline;
@@ -89,4 +89,11 @@ export const FooterSection = styled.footer`
     font-size: 14px;
     padding: 5px 0;
   }
+`;
+
+export const Typography = styled.h1`
+  font-family: "Reenie Beanie", cursive;
+  font-size: 36px !important;
+  margin: 0;
+  margin-top: 40px;
 `;

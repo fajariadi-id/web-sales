@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useNavigation } from "react-router-dom";
 import products from "../../assets/data/products";
 import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
-import { FooterSection } from "./styled";
+import { FooterSection, Typography } from "./styled";
 
 const Footer = ({ nav }) => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoints();
@@ -35,7 +35,14 @@ const Footer = ({ nav }) => {
   };
 
   return (
-    <FooterSection className="container">
+    <FooterSection
+      isSM={isSM}
+      isMD={isMD}
+      isLG={isLG}
+      isXL={isXL}
+      isXXL={isXXL}
+      className="container"
+    >
       <div className={`footer`}>
         <div
           className={`owner d-flex ${
@@ -48,15 +55,18 @@ const Footer = ({ nav }) => {
             } align-items-center`}
           >
             <div className="img-container">
-              <img src="/assets/images/profile.jpg" alt="profile" />
+              <img src="/assets/images/profile.png" alt="profile" />
             </div>
 
             <div>
-              <h1 className="name m-0">Cliff Daihatsu</h1>
-              <p
-                className={`m-0 p-0 ps-1 ${!isLG && isXL ? "" : "text-center"}`}
-              >
+              <h1 className={`name m-0 ${!isLG && isXL ? "" : "text-center"}`}>
+                Cliff Daihatsu
+              </h1>
+              <p className={`m-0 p-0 ${!isLG && isXL ? "" : "text-center"}`}>
                 Sales Executive
+              </p>
+              <p className={`m-0 p-0 ${!isLG && isXL ? "" : "text-center"}`}>
+                Daihatsu Gading Serpong Tangerang
               </p>
             </div>
           </div>
@@ -96,22 +106,9 @@ const Footer = ({ nav }) => {
           </div>
         </div>
 
-        <div
-          className={`address d-flex ${
-            isLG && "flex-column"
-          } justify-content-between align-items-start`}
-        >
-          <div>
-            <p>PT. Astra International Daihatsu Sales Operation Wilayah DKI2</p>
-            <p>Jl. Yos Sudarso Kav 24, Sungai Bambu</p>
-            <p>Tanjung Priuk, Jakarta Utara, DKI Jakarta, 14330</p>
-          </div>
-          <img
-            className="footer-logo"
-            src="/assets/images/logo_footer.png"
-            alt="footer logo"
-          />
-        </div>
+        <Typography className={`${!isMD && isLG ? "text-end" : "text-center"}`}>
+          Sahabat Daihatsu Promo
+        </Typography>
       </div>
 
       <p className="copy m-0 text-center text-white">
