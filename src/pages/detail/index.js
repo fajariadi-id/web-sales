@@ -62,7 +62,7 @@ const Detail = () => {
 
             <section className="variant">
               <h1 className="text-center">Daihatsu {state.name}</h1>
-              <div className="cta d-flex flex-column align-items-center">
+              <div className="detail-highlight d-flex flex-column align-items-center">
                 <div className="category d-flex align-items-center justify-content-center">
                   <span>Warna</span>
                   <span>Harga</span>
@@ -301,7 +301,7 @@ const DetailProduct = styled.main`
     }
   }
 
-  & .cta {
+  & .detail-highlight {
     width: fit-content;
     margin: 0 auto;
   }
