@@ -53,7 +53,11 @@ const Footer = ({ nav }) => {
 
             <div>
               <h1 className="name m-0">Cliff Daihatsu</h1>
-              <p className="m-0 p-0 ps-1">Sales Executive</p>
+              <p
+                className={`m-0 p-0 ps-1 ${!isLG && isXL ? "" : "text-center"}`}
+              >
+                Sales Executive
+              </p>
             </div>
           </div>
 

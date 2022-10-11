@@ -10,11 +10,11 @@ import CallToAction from "../CallToAction";
 
 const Navbar = ({ navbarRef }) => {
   const { isSM, isMD, isLG, isXL, isXXL } = ResponsiveBreakpoint();
-  // console.log("isSM", isSM);
-  // console.log("isMD", isMD);
-  // console.log("isLG", isLG);
-  // console.log("isXL", isXL);
-  // console.log("isXXL", isXXL);
+  console.log("isSM", isSM);
+  console.log("isMD", isMD);
+  console.log("isLG", isLG);
+  console.log("isXL", isXL);
+  console.log("isXXL", isXXL);
 
   const [showNav, setShowNav] = useState(false);
   const [showMenuBar, setShowMenuBar] = useState(false);
