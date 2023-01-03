@@ -52,7 +52,7 @@ const Promotion = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/assets/images/banner_promo/banner2.jpg" alt="promo" />
+            <img src="/assets/images/banner_promo/banner2.png" alt="promo" />
           </a>
         </article>
       </div>
