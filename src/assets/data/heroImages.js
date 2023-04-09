@@ -13,7 +13,7 @@ const heroImages = [
   },
   {
     id: 4,
-    img: "/assets/images/hero/ayla.jpg",
+    img: "/assets/images/hero/new_ayla.jpg",
   },
   {
     id: 5,

@@ -40,7 +40,7 @@ const Promotion = () => {
           >
             <video autoPlay muted loop>
               <source
-                src="/assets/videos/banner_promo/banner_xenia.mp4"
+                src="/assets/videos/banner_promo/banner_new_ayla.mp4"
                 type="video/mp4"
               />
             </video>

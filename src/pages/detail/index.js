@@ -70,7 +70,7 @@ const Detail = () => {
                 </div>
 
                 <a
-                  href="/assets/documents/pricelist.pdf"
+                  href="/assets/documents/cliff-daihatsu-pricelist-2023.xlsx"
                   target="_blank"
                   rel="noreferrer"
                   className="text-white brosur mx-auto"
