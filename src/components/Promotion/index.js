@@ -1,6 +1,5 @@
 import React from "react";
 import { PromoSection } from "./styled";
-import bannerPromo from "../../assets/images/banners/promo.jpg";
 import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 
 const Promotion = () => {
@@ -25,16 +24,20 @@ const Promotion = () => {
       >
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan promo instant approval All New Xenia DP 12juta."
+            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan product New Terios. Bisa kirimkan brosurnya?"
             target="_blank"
             rel="noreferrer"
           >
-            <img src="/assets/images/banner_promo/banner1.jpg" alt="promo" />
+            <img
+              style={{ width: 352, height: 352, objectFit: "cover" }}
+              src="/assets/images/banner_promo/banner1.jpg"
+              alt="promo"
+            />
           </a>
         </article>
         <article>
           <a
-            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan promo All New Xenia."
+            href="https://api.whatsapp.com/send?phone=6287875273454&text=Halo, saya tertarik dengan product All New Ayla."
             target="_blank"
             rel="noreferrer"
           >

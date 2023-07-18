@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { ArticleCard, Triangle } from "./styled";
-import productXenia from "../../../assets/images/cars/productXenia.png";
+import { ArticleCard } from "./styled";
 import { Button } from "react-bootstrap";
 import ResponsiveBreakpoints from "../../../helper/ResponsiveBreakpoints";
 import { useNavigate } from "react-router-dom";

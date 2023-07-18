@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
-import products from "../../assets/data/products";
 import CallToAction from "../../components/CallToAction";
 import CTAFixed from "../../components/CTAFixed";
 import Footer from "../../components/Footer";
@@ -75,8 +74,20 @@ const Detail = () => {
                   rel="noreferrer"
                   className="text-white brosur mx-auto"
                 >
-                  <Button className="btn-brosur w-100">Lihat Brosur</Button>
+                  <Button className="btn-brosur w-100">Lihat Price List</Button>
                 </a>
+
+                {state?.hasIndependentBrosur && (
+                  <a
+                    style={{ marginTop: -25 }}
+                    href="/assets/documents/brosurs/terios-brosur.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white brosur mx-auto"
+                  >
+                    <Button className="btn-brosur w-100">Lihat Brosur</Button>
+                  </a>
+                )}
               </div>
 
               <Marquee

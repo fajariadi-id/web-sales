@@ -1,9 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
-import terios from "../../assets/images/cars/terios.jpg";
-import xenia from "../../assets/images/cars/xenia.jpg";
-import rocky from "../../assets/images/cars/rocky.jpg";
+import { Autoplay, Pagination } from "swiper";
 import ResponsiveBreakpoints from "../../helper/ResponsiveBreakpoints";
 import { HeroSection } from "./styled";
 import heroImages from "../../assets/data/heroImages";
